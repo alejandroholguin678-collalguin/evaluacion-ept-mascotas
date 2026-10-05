@@ -1,0 +1,350 @@
+/* ===================================================
+   HOJA DE ESTILOS PROFESIONAL - HUELLITAS & AMOR
+   Paleta de Colores Vivos para Empresa de Mascotas
+   =================================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta de Colores Vivos y Tipografía */
+:root {
+    --color-naranja-vivo: #FF5964;
+    --color-naranja-calido: #FF8811;
+    --color-turquesa-vivo: #00A896;
+    --color-turquesa-claro: #E8F8F5;
+    --color-amarillo-sol: #F4D35E;
+    --color-morado-alegre: #7209B7;
+    --color-fondo-suave: #FAF9F6;
+    --color-blanco: #FFFFFF;
+    --color-texto-oscuro: #2B2D42;
+    --color-texto-gris: #4A5568;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-suave);
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+}
+
+/* 1. ENCABEZADO Y NAVEGACIÓN DIVERSIFICADA */
+.header-principal {
+    background-color: var(--color-blanco);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icono-marca {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.nombre-marca {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-naranja-vivo);
+    letter-spacing: -0.5px;
+}
+
+/* Menú de navegación con color vibrante e independiente */
+.menu-navegacion {
+    background: linear-gradient(135deg, var(--color-turquesa-vivo), #02C39A);
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+}
+
+.menu-navegacion ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-navegacion a:hover,
+.menu-navegacion a.activo {
+    background-color: var(--color-blanco);
+    color: var(--color-turquesa-vivo);
+}
+
+/* 4 y 5. SECCIÓN HERO */
+.seccion-hero {
+    background: linear-gradient(135deg, #FFF0ED 0%, #E6F8F6 100%);
+    padding: 60px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-contenido {
+    flex: 1;
+}
+
+.badge-bienvenida {
+    display: inline-block;
+    background-color: #FFE3E5;
+    color: var(--color-naranja-vivo);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.hero-contenido h1 {
+    font-size: 2.4rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+    line-height: 1.25;
+}
+
+.hero-contenido strong {
+    color: var(--color-naranja-vivo);
+}
+
+.hero-contenido p {
+    font-size: 1.05rem;
+    color: var(--color-texto-gris);
+    margin-bottom: 25px;
+}
+
+.boton-hero {
+    display: inline-block;
+    background-color: var(--color-naranja-calido);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 136, 17, 0.4);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.boton-hero:hover {
+    transform: translateY(-3px);
+    background-color: var(--color-naranja-vivo);
+}
+
+.hero-imagen-container {
+    flex: 1;
+    text-align: center;
+}
+
+.imagen-hero {
+    width: 100%;
+    max-width: 480px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid var(--color-blanco);
+    box-shadow: var(--sombra-card);
+}
+
+/* TÍTULOS GENERALES */
+.titulo-seccion {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-texto-oscuro);
+    margin-bottom: 8px;
+}
+
+.subtitulo-seccion {
+    text-align: center;
+    color: var(--color-texto-gris);
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+
+/* 6. SECCIÓN 1: CARDS */
+.seccion-servicios {
+    padding: 70px 5%;
+    background-color: var(--color-blanco);
+}
+
+.contenedor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: var(--color-blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Diferenciación visual por card */
+.card-naranja { border-top: 5px solid var(--color-naranja-vivo); }
+.card-turquesa { border-top: 5px solid var(--color-turquesa-vivo); }
+.card-amarillo { border-top: 5px solid var(--color-naranja-calido); }
+.card-morado { border-top: 5px solid var(--color-morado-alegre); }
+
+.card-imagen-box {
+    position: relative;
+    height: 170px;
+}
+
+.card-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-categoria {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: var(--color-blanco);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.card-cuerpo {
+    padding: 20px;
+}
+
+.card-cuerpo h3 {
+    color: var(--color-texto-oscuro);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-cuerpo p {
+    font-size: 0.9rem;
+    color: var(--color-texto-gris);
+}
+
+/* 7. SECCIÓN 2: BENEFICIOS */
+.seccion-beneficios {
+    padding: 70px 5%;
+    background-color: var(--color-turquesa-claro);
+}
+
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.beneficio-item {
+    background-color: var(--color-blanco);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s ease;
+}
+
+.beneficio-item:hover {
+    transform: scale(1.03);
+}
+
+.beneficio-icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.beneficio-item h3 {
+    color: var(--color-turquesa-vivo);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.beneficio-item p {
+    font-size: 0.9rem;
+    color: var(--color-texto-gris);
+}
+
+/* 8. SECCIÓN 3: GALERÍA (Exactamente 3 imágenes) */
+.seccion-galeria {
+    padding: 70px 5%;
+    background-color: var(--color-blanco);
+}
+
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.galeria-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra-card);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.08);
+}
+
+.galeria-item figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 15px 10px 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* 9. PIE DE PÁGINA (FOOTER) */
+.pie-pagina {
+    background-color: var(--color-texto-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 25px 5%;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-top: 4px solid var(--color-naranja-vivo);
+}
